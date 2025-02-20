@@ -11,6 +11,10 @@
 
     <name>java-webapp</name>
 
+    <properties>
+        <java.version>11</java.version>  <!-- Set Java version -->
+    </properties>
+
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -28,6 +32,16 @@
 
     <build>
         <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.8.1</version>  <!-- Updated compiler plugin -->
+                <configuration>
+                    <source>11</source>  <!-- Ensure Java 11 or later -->
+                    <target>11</target>
+                </configuration>
+            </plugin>
+
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
